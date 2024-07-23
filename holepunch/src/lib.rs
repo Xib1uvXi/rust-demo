@@ -1,3 +1,3 @@
-mod message;
-mod nat_tpye;
-mod client;
+pub mod message;
+pub mod nat_tpye;
+pub mod client;

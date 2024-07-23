@@ -2,18 +2,26 @@ use serde::{Deserialize, Serialize};
 
 pub type NATType = i64;
 
-const NAT_TYPE_UNKNOWN: NATType = 0;
-const NAT_TYPE_NONE: NATType = 1;
-const NAT_TYPE_FULL_CONE: NATType = 2;
-const NAT_TYPE_RESTRICTED_CONE: NATType = 3;
-const NAT_TYPE_FULL_OR_RESTRICTED_CONE: NATType = 4;
-const NAT_TYPE_PORT_RESTRICTED_CONE: NATType = 5;
-const NAT_TYPE_SYMMETRIC: NATType = 6;
+pub const NAT_TYPE_UNKNOWN: NATType = 0;
+pub const NAT_TYPE_NONE: NATType = 1;
+pub const NAT_TYPE_FULL_CONE: NATType = 2;
+pub const NAT_TYPE_RESTRICTED_CONE: NATType = 3;
+pub const NAT_TYPE_FULL_OR_RESTRICTED_CONE: NATType = 4;
+pub const NAT_TYPE_PORT_RESTRICTED_CONE: NATType = 5;
+pub const NAT_TYPE_SYMMETRIC: NATType = 6;
 
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct NATTypeInfo {
     pub nat_type: NATType
+}
+
+impl NATTypeInfo {
+    pub fn new(nat_type: NATType) -> Self {
+        NATTypeInfo {
+            nat_type
+        }
+    }
 }
 
 #[cfg(test)]

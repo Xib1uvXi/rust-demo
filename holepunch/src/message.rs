@@ -1,14 +1,13 @@
-use std::ffi::CString;
 use serde::{Deserialize, Serialize};
 
 pub type MessageType = i64;
 
-const MESSAGE_TYPE_ACK: MessageType = 0;
-const MESSAGE_TYPE_CONNECT: MessageType = 1;
-const MESSAGE_TYPE_PUNCHING_NEGOTIATION: MessageType = 2;
-const MESSAGE_TYPE_START_PUNCHING: MessageType = 3;
-const MESSAGE_TYPE_EMPTY: MessageType = 4;
-const MESSAGE_TYPE_CONNECTION_ACK: MessageType = 5;
+pub const MESSAGE_TYPE_ACK: MessageType = 0;
+pub const MESSAGE_TYPE_CONNECT: MessageType = 1;
+pub const MESSAGE_TYPE_PUNCHING_NEGOTIATION: MessageType = 2;
+pub const MESSAGE_TYPE_START_PUNCHING: MessageType = 3;
+pub const MESSAGE_TYPE_EMPTY: MessageType = 4;
+pub const MESSAGE_TYPE_CONNECTION_ACK: MessageType = 5;
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Message {
